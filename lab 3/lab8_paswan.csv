@@ -1,0 +1,16 @@
+from random import randint, seed
+import csv
+seed()
+surname = "paswan"
+sample = [randint(1,31)
+          for i in range(100)]
+print("random file")
+print (sample)
+print()
+
+#save the file in csv file
+
+with open("sample of _"+surname+".csv", "w", newline="") as csv_file:
+    csv_writer = csv.writer(csv_file)
+    for item in sample:
+        csv_writer.writerow([item])
